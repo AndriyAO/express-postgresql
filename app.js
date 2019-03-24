@@ -1,7 +1,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const passport = require("passport");
-require("./server/config/database");
 
 const routes = require("./server/routes/index");
 
@@ -18,10 +17,10 @@ var models = require("./server/models");
 models.sequelize
   .sync()
   .then(function() {
-    console.log("Nice! Database looks fine");
+    console.log("Connected to DB");
   })
   .catch(function(err) {
-    console.log(err, "Something went wrong with the Database Update!");
+    console.log(err, "Unable connect to DB");
   });
 
 app.listen({ port }, () => {

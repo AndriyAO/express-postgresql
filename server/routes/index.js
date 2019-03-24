@@ -9,9 +9,9 @@ const authController = require("./../controllers/auth");
 
 const router = express.Router();
 
-router.post("/users", userController.createUser); //done
-router.post("/login", passportLocal, authController.login); //done
-router.get("/users/:id", userController.findUser); //done
+router.post("/users", userController.createUser);
+router.post("/login", passportLocal, authController.login);
+router.get("/users/:id", userController.findUser);
 router.put("/users/:id", userController.updateUserById);
 
 router.get("/auth", passportJWT, authController.jwtAuth);

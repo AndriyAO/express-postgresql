@@ -35,15 +35,13 @@ function findUser(req, res) {
 function updateUserById(req, res) {
   User.update(req.body, { where: { id: req.params.id } })
     .then(user => {
-      console.log(user);
-      if (!user) {
+      if (!user[0]) {
         return res.status(404).send("User not found");
       }
-
-      res.send({ user });
+      res.status(200);
     })
-    .catch(e => {
-      res.status(400).send();
+    .catch(err => {
+      res.status(400).send(err);
     });
 }
 
