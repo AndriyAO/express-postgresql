@@ -1,0 +1,31 @@
+{
+  "name": "express-postgresql",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndriyAO/express-postgresql.git"
+  },
+  "author": "Andrii Antoniuk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AndriyAO/express-postgresql/issues"
+  },
+  "homepage": "https://github.com/AndriyAO/express-postgresql#readme",
+  "dependencies": {
+    "bcrypt": "^3.0.5",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "jsonwebtoken": "^8.5.1",
+    "nodemon": "^1.18.10",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "passport-jwt": "^4.0.0",
+    "pg": "^7.9.0",
+    "sequelize": "^5.1.0"
+  }
+}
